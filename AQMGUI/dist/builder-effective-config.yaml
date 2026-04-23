@@ -1,0 +1,7 @@
+directories:
+  output: dist
+  buildResources: build
+appId: aq
+deb: {}
+files: []
+electronVersion: 27.1.3
