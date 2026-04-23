@@ -1,0 +1,28 @@
+{
+  "name": "air-quality-monitor",
+  "productName": "air-quality-monitor",
+  "version": "0.0.1",
+  "description": "Program to display data from SDS011 and BME280 Sensors",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "buildLinux": "electron-builder --linux --dir",
+    "buildWin": "electron-builder --windows"
+  },
+  "author": {
+    "name": "Preston Lisek",
+    "email": "prestonlisek32@gmail.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^27.1.3",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.0"
+  },
+  "build": {
+    "appId": "aq",
+    "deb": {}
+  }
+}
