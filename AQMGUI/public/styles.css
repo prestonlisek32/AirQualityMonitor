@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Courier New';
+}
+
+body {
+  background: #121212;
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0;
+  height: 100vh;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wrapper {
+  display: flex;
+  padding: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------------ Main Display ------------------*/
+.display-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
+    0 0 0 1px hsla(0, 0%, 0%, 0.05), 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+  max-width: 300px;
+  width: 100%;
+}
+
+#bmeDiv {
+  margin-bottom: 10px;
+}
+
+#AQIChart {
+  max-height: 250px;
+}
+
+#toggle {
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+#toggle.disabled {
+  cursor: not-allowed;
+  background-color: #111;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #333;
+  border-radius: 8px;
+  width: 60%;
+  box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
+    0 0 0 1px hsla(0, 0%, 0%, 0.05), 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+}
+
+p {
+  margin: 0;
+  text-align: center;
+  margin-left: auto;
+}
+
+.sensor {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#temperature-unit,
+span,
+span span {
+  font-size: 16px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.svg-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.svg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
+    0 0 0 1px hsla(0, 0%, 0%, 0.05), 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+
+}
+
+svg {
+  fill: #fff;
+}
+
+.smallIcon {
+  width: 40px;
+  height: 40px;
+
+}
+
+.largeIcon {
+  width: 80px;
+  height: 80px;
+}
+
+/* ------------------ SDS011 Chart ------------------*/
+#chartDiv {
+  width: 575px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: auto;
+}
+
+.chart {
+  border-radius: 10px 0 10px 10px;
+  background: #222;
+  box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
+    0 0 0 1px hsla(0, 0%, 0%, 0.05), 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+}
+
+.tab {
+  display: flex;
+  width: 33%;
+  margin-left: auto;
+}
+
+.tab button {
+  flex: 1;
+  font-family: inherit;
+  padding: 8px;
+  border: 1px solid #333;
+  border-bottom: 0;
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  border-radius: 10px 10px 0 0;
+  font-size: 16px;
+}
+
+.tab button:hover {
+  background-color: #333;
+}
+
+.tab button.active {
+  background-color: #4caf50;
+}
